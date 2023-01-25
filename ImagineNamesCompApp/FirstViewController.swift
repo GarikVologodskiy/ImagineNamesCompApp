@@ -21,8 +21,15 @@ class FirstViewController: UIViewController {
         destinationVC.secondName = partnerNameTF.text
     }
 
-
     @IBAction func resultButtonTapped() {
+        guard let firstName = yourNameTF.text, let secondName = partnerNameTF.text else { return }
+        if firstName.isEmpty || secondName.isEmpty {
+            showAlert (
+                title: "Names are missing",
+                message: "Please enter both names"
+            )
+            return
+        }
         performSegue(withIdentifier: "goToResult", sender: nil)
     }
     
@@ -38,6 +45,15 @@ class FirstViewController: UIViewController {
     }
     
     
+}
+
+extension FirstViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet) //action
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 extension FirstViewController: UITextFieldDelegate {
