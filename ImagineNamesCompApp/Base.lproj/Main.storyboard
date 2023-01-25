@@ -99,13 +99,6 @@
                                     <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="hHa-fb-eMA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC6-Wk-iBF">
-                                <rect key="frame" x="150" y="514" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.74699490413101399" green="0.80886019342118154" blue="0.86078917980194092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -122,7 +115,6 @@
                     <navigationItem key="navigationItem" id="Y99-te-47k"/>
                     <connections>
                         <outlet property="partnerNameTF" destination="gVV-2K-VhE" id="hLI-4e-Rp1"/>
-                        <outlet property="someLabel" destination="AC6-Wk-iBF" id="037-Aw-aZB"/>
                         <outlet property="yourNameTF" destination="tiL-lf-wwD" id="Pf5-dN-UEb"/>
                         <segue destination="4mK-47-0vE" kind="show" identifier="goToResult" id="jBB-Zp-csD"/>
                     </connections>
@@ -182,7 +174,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fQW-bb-xng" kind="unwind" unwindAction="unwindSegueToFirstVCWithSegue:" id="ksY-7i-3av"/>
+                                    <action selector="backButtonTapped" destination="4mK-47-0vE" eventType="touchUpInside" id="RBF-1X-ypA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -206,6 +198,7 @@
                         <outlet property="namesLabel" destination="cmj-Uv-ycJ" id="Gop-6D-Sgr"/>
                         <outlet property="progressView" destination="O5a-e2-62E" id="dze-ll-j5H"/>
                         <outlet property="resultLabel" destination="xeM-Lx-96L" id="phl-cs-1oq"/>
+                        <segue destination="fQW-bb-xng" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToFirstVCWithSegue:" id="Fm4-TD-Xhf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hz5-X8-Kej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
