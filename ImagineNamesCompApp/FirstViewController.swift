@@ -13,11 +13,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var partnerNameTF: UITextField!
     @IBOutlet weak var yourNameTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         //cast segue to ResultViewController
@@ -32,7 +27,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
-        guard segue.identifier == "unwindSegue" else { return }
+//        guard segue.identifier == "unwindSegue" else { return }
         
         yourNameTF.text = ""
         partnerNameTF.text = ""

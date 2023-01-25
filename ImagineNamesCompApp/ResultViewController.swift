@@ -81,8 +81,8 @@ class ResultViewController: UIViewController {
         }
         return result
     }
-    @IBAction func backButtonTapped() {
-        performSegue(withIdentifier: "unwindSegue", sender: nil)
-    }
+//    @IBAction func backButtonTapped() {
+//        performSegue(withIdentifier: "unwindSegue", sender: nil)
+//    }
     
 }
